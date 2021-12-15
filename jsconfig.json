@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/atoms/*": ["atoms/*"],
       "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"]
     }
   },
