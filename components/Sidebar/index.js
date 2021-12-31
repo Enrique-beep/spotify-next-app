@@ -5,9 +5,9 @@ import {
   SearchIcon,
   LibraryIcon,
   PlusCircleIcon,
-  HeartIcon,
   RssIcon
 } from '@heroicons/react/outline'
+import { HeartIcon } from '@heroicons/react/solid'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
@@ -27,7 +27,7 @@ function Sidebard() {
   }, [session, spotifyApi])
 
   return (
-    <div className="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
+    <div className="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36">
       <div className="space-y-4">
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
@@ -51,12 +51,12 @@ function Sidebard() {
           <p>Create Playlist</p>
         </button>
 
-        <button className="flex items-center space-x-2 hover:text-white">
+        <button className="flex items-center text-blue-500 space-x-2 hover:text-white">
           <HeartIcon className="h-5 w-5" />
           <p>Liked Songs</p>
         </button>
 
-        <button className="flex items-center space-x-2 hover:text-white">
+        <button className="flex items-center text-green-500 space-x-2 hover:text-white">
           <RssIcon className="h-5 w-5" />
           <p>Your Episodes</p>
         </button>
